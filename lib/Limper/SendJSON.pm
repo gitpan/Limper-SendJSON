@@ -1,12 +1,12 @@
 package Limper::SendJSON;
-$Limper::SendJSON::VERSION = '0.001';
+$Limper::SendJSON::VERSION = '0.002';
 use base 'Limper';
 use 5.10.0;
 use strict;
 use warnings;
 
 package Limper;
-$Limper::VERSION = '0.001';
+$Limper::VERSION = '0.002';
 use JSON::MaybeXS;
 use Try::Tiny;
 
@@ -36,7 +36,7 @@ Limper::SendJSON - adds a send_json function to Limper
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
@@ -57,7 +57,7 @@ version 0.001
 
 =head1 DESCRIPTION
 
-C<Limper::SendJSON> extends C<Limper> to easily return JSON, with the proper Content-Type header.
+B<Limper::SendJSON> extends L<Limper> to easily return JSON, with the proper Content-Type header.
 
 =head1 EXPORTS
 
@@ -69,7 +69,7 @@ The following are all additionally exported by default:
 
 =head2 send_json
 
-Sends the C<HASH> or C<ARRAY> given as JSON. If B<Content-Type> is not
+Sends the B<HASH> or B<ARRAY> given as JSON. If B<Content-Type> is not
 already set, it will be set to B<application/json>.  Returns B<500> if the
 scalar cannot be encoded by L<JSON::MaybeXS>.
 
@@ -84,6 +84,9 @@ at your option, any later version of Perl 5 you may have available.
 =head1 SEE ALSO
 
 L<Limper>
+
+L<Limper::Engine::PSGI>
+
 L<Limper::SendFile>
 
 =cut

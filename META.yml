@@ -15,10 +15,10 @@ name: Limper-SendJSON
 provides:
   Limper:
     file: lib/Limper/SendJSON.pm
-    version: 0.001
+    version: 0.002
   Limper::SendJSON:
     file: lib/Limper/SendJSON.pm
-    version: 0.001
+    version: 0.002
 requires:
   JSON::MaybeXS: 0
   Limper: 0.008
@@ -28,4 +28,4 @@ requires:
   warnings: 0
 resources:
   repository: https://gitable.org/ashley/limper-sendjson.git
-version: 0.001
+version: 0.002

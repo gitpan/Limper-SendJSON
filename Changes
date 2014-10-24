@@ -1,4 +1,8 @@
 Revision history for Limper-SendJSON
 
+0.002     2014-10-24 02:29:12+00:00 UTC
+- fix test skipping
+- skip tests if MSWin32
+
 0.001     2014-10-19 06:52:49+00:00 UTC
 - initial basic release

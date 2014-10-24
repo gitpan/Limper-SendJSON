@@ -45,11 +45,11 @@
    "provides" : {
       "Limper" : {
          "file" : "lib/Limper/SendJSON.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       },
       "Limper::SendJSON" : {
          "file" : "lib/Limper/SendJSON.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       }
    },
    "release_status" : "stable",
@@ -60,6 +60,6 @@
          "web" : "https://gitable.org/ashley/limper-sendjson.git"
       }
    },
-   "version" : "0.001"
+   "version" : "0.002"
 }
 
