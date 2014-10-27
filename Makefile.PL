@@ -21,12 +21,12 @@ my %WriteMakefileArgs = (
   "NAME" => "Limper::SendJSON",
   "PREREQ_PM" => {
     "JSON::MaybeXS" => 0,
-    "Limper" => "0.008",
+    "Limper" => "0.012",
     "Try::Tiny" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.002",
+  "VERSION" => "0.003",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -35,7 +35,7 @@ my %WriteMakefileArgs = (
 
 my %FallbackPrereqs = (
   "JSON::MaybeXS" => 0,
-  "Limper" => "0.008",
+  "Limper" => "0.012",
   "Try::Tiny" => 0,
   "strict" => 0,
   "warnings" => 0

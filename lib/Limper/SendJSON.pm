@@ -1,12 +1,13 @@
 package Limper::SendJSON;
-$Limper::SendJSON::VERSION = '0.002';
+$Limper::SendJSON::VERSION = '0.003';
 use base 'Limper';
 use 5.10.0;
 use strict;
 use warnings;
 
-package Limper;
-$Limper::VERSION = '0.002';
+package		# newline because Dist::Zilla::Plugin::PkgVersion and PAUSE indexer
+  Limper;
+
 use JSON::MaybeXS;
 use Try::Tiny;
 
@@ -14,13 +15,12 @@ push @Limper::EXPORT, qw/send_json/;
 
 sub send_json {
     my ($data, @options) = @_;
-    my @headers = headers;
-    headers 'Content-Type' => 'application/json', headers unless grep { $_ eq 'Content-Type' } keys %{{&headers}};
+    response->{headers}{'Content-Type'} //= 'application/json';
     try {
         JSON::MaybeXS->new(@options)->encode($data);
     } catch {
         warning $_;
-        headers @headers;
+        headers 'Content-Type' => 'text/plain';
         status 500;
         'Internal Server Error';
     };
@@ -36,7 +36,7 @@ Limper::SendJSON - adds a send_json function to Limper
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 

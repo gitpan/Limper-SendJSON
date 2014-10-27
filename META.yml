@@ -13,19 +13,16 @@ meta-spec:
   version: 1.4
 name: Limper-SendJSON
 provides:
-  Limper:
-    file: lib/Limper/SendJSON.pm
-    version: 0.002
   Limper::SendJSON:
     file: lib/Limper/SendJSON.pm
-    version: 0.002
+    version: 0.003
 requires:
   JSON::MaybeXS: 0
-  Limper: 0.008
+  Limper: 0.012
   Try::Tiny: 0
   perl: v5.10.0
   strict: 0
   warnings: 0
 resources:
   repository: https://gitable.org/ashley/limper-sendjson.git
-version: 0.002
+version: 0.003
